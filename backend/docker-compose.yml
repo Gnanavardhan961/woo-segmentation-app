@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  product-service:
+    build: ./product-service
+    ports:
+      - "4001:4001"
+    restart: unless-stopped
+
+  segment-service:
+    build: ./segment-service
+    ports:
+      - "4002:4002"
+    restart: unless-stopped
